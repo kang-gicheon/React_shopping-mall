@@ -1,4 +1,4 @@
-import { Navbar, Container, Nav} from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import './App.css';
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
         </Container>
       </Navbar>
 
-      <div className='main-bg' style={{backgroundImage : 'url()'}}></div>
+      {/* src 메인페이지 이미지 적용 테스트 / 이미지 태그를 사용한다면 <img src = {변수명}> */}
+      <div className='main-bg'></div> 
 
     </div>
   );
