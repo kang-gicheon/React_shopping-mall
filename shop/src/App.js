@@ -51,22 +51,9 @@ function App() {
             </>
           }
         />
-        <Route path="/detail" element={<Detail />} />
-
-        <Route path="/about" element={<About />}>
-          <Route path="member" element={<div>멤버 테스트</div>} />
-          <Route path="location" element={<About />} />
-        </Route>
+        <Route path="/detail" element={<Detail shoes={shoes} />} />
+        <Route path="/detail/:id" element={<Detail shoes={shoes} />} />
       </Routes>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h4>회사 정보</h4>
-      <Outlet></Outlet>
     </div>
   );
 }
