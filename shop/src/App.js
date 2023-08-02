@@ -1,8 +1,9 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import "./App.css";
+import axios from "axios";
 import { useState } from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { Route, Routes, useNavigate } from "react-router-dom";
+import "./App.css";
 import data from "./data.js";
-import { Routes, Route, useNavigate, Outlet } from "react-router-dom";
 import Detail from "./pages/Detail.js";
 
 function App() {
@@ -48,6 +49,20 @@ function App() {
                   })}
                 </div>
               </div>
+              <button
+                onClick={() => {
+                  axios
+                    .get("https://codingapple1.github.io/shop/data2.jsoㅇn")
+                    .then((result) => {
+                      console.log(result.data);
+                    })
+                    .catch(() => {
+                      console.log("실패했습니다.");
+                    });
+                }}
+              >
+                더보기
+              </button>
             </>
           }
         />
